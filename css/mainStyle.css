@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@200;500;600;700;800&display=swap");
+
+:root{
+    --main-color: #ff8000;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --text-darkcolor: #cc6900;/*#804200;*/
+    --body-bg-color: hsl(20, 65%, 94%);
+    --section-bg-color: #ffffe6;
+    --header-bg:#ffffcc;
+    --section-title-color: #6b6b47;
+    --section-p-color:#777;
+    --rating-stars-color: #e6e600;
+    --container-padding: 2em;
+    --section-padding: 8em;
+    
+}
+/* start global rules*/
+* {
+  
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* font-size: 15px; */
+  
+}
+
+body{
+    background-color:var(--body-bg-color);
+    /* background-color: rgb(245, 206, 192); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+
+.container{
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    
+}
+
+section{
+    padding-top: calc(var(--section-padding) / 3) ;
+    padding-bottom: calc(var(--section-padding) / 1);
+    margin-top: 5em;
+    margin-bottom: 1.8em;
+    
+}
+
+
+
+/* Start Media Quries for responsive*/
+
+/* Start styling for all small screens responsive*/
+
+@media (min-width: 250px) and (max-width: 499px){
+   body{
+    font-size: 14px;
+   }
+   .container{
+        justify-content: center;
+        font-size: 14px;
+    }
+    header{
+        position: static;
+        width: 100%;
+        height: 65em;
+        padding-top: 0;
+    }
+    .header-div{
+        padding-top: 0;
+        margin: 0em auto 1em auto;
+        height: fit-content;
+    }
+    
+    .header-div .container{
+        /* flex-direction: column ; */
+        flex-direction: column ;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      
+        align-items: center;
+       
+        /* margin: 0em auto 1em auto;  */
+        padding: 0em auto 1em auto;
+        margin-top: 1em;
+    }
+    .header-div .container .logo{
+        text-align: center;
+        padding-top: 0;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        display: flex;
+        justify-content: center;
+    }
+    nav .navigation{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    nav .navigation a{
+        margin-bottom: 0.5em;
+    }
+
+    .header-div .container .signin-btn{
+        text-align: center;
+        margin-left: 1em;
+        margin-bottom: 0;
+    }
+
+    .main-section .container{
+        flex-direction: column-reverse;
+        font-size: 8px;
+        /* justify-content: center; */
+        align-items: center;
+        align-content: center;
+    }
+
+    .main-section .container .main-texts{
+        text-align: center;
+        width: 80%;
+        justify-content: center;
+        font-size: 6px;
+    }
+    .main-section .container .main-texts p{
+        font-size: 14px;
+        align-content:left ;
+    }
+
+    .main-section .container .main-texts a{
+        font-size: 14px;
+        display: inline-block;
+        justify-content: left;
+    }
+    .main-section .container .main-img{
+        /* padding-top: 1em; */
+        margin-bottom: 3em;
+    }
+
+    .container .cards-container{
+       
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
+    }
+    .cards-container .meal-card, .container .cards-container .review-card{
+        width: 80%;
+        margin: 1em auto;
+        
+    }
+
+    .container .cards-container .service-card{
+        width: 40%;
+        height: 40%;
+        margin: 1em ;
+        padding: 0.5em;
+    }
+
+    footer{
+        font-size: 8px;
+        justify-content: center;
+    }
+    .footer-div{
+        justify-content: space-evenly;
+    }
+    .footer-links a{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* End styling for all small screens responsive*/
+
+/* ultra small screen */
+@media (min-width: 250px) and (max-width: 279px){
+    
+
+    body{
+        font-size: 3px;
+    }
+   
+    
+    .container{
+        min-width: 220px;
+        max-width: 230px;
+    }
+
+}
+
+/* very small screen */
+@media (min-width: 280px) and (max-width: 499px){
+    
+    footer{
+        width:100%;
+    }
+    body{
+        font-size: 5px;
+    }
+   
+    
+    .container{
+        min-width: 230px;
+        max-width: 440px;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 767px){
+    body{
+        font-size: 7px;
+    }
+   
+    
+    .container{
+        min-width: 450px;
+        max-width: 710px;
+    }
+}
+
+/* small screen */
+@media (min-width: 768px){
+    body{
+        font-size: 8px;
+    }
+
+    .container{
+        
+        width: 710px;
+    }
+     section{
+        padding: 0;
+     }
+}
+
+/* medium screen */
+@media (min-width: 912px){
+    body{
+        font-size: 10px;
+    }
+
+   
+    .container{
+        width: 860px;
+    }
+    
+}
+
+/* large screen */
+@media (min-width: 1023px){
+    body{
+        font-size: 12px;
+    }
+    .container{
+        width: 1000px;
+    }
+   
+}
+
+/* very large screen */
+@media (min-width: 1280px){
+    body{
+        font-size: 15px;
+    }
+    .container{
+        width: 1100px;
+    }
+    
+}
+/* End Media Quries for responsive*/
+
+/* End global rules*/
+  
+
+
+
+/* Start Header Styling */
+
+header{
+    background-color: var(--body-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.header-div .container{
+    background-color: #ffffff;
+    display: flex;
+    justify-content:space-between;
+    padding-top: calc(var(--section-padding)/4);
+    padding-bottom: calc(var(--section-padding)/4);
+    align-items: center;
+    box-shadow: 0 5px 25px rgba( 4 4 4 / 10%);
+    border-radius: 2em;
+    margin-top: 2.5em;
+    transition: 1s ease;
+}
+.header-div .container:hover{
+    transform: scale(1.1);
+}
+
+.logo{
+    color: var(--main-color);
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0;
+}
+
+
+nav{
+    margin: auto;
+}
+
+.navigation a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 450;
+    color: var(--main-color);
+    padding: 0.33em;
+    margin-left: 1em;
+}
+
+.navigation a:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.navigation .header-home{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+
+.header-div .container .signin-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.53em;
+    transition: 0.7s;
+
+}
+.container .signin-btn:hover{
+    transform: scale(1.1);
+    color: var(--section-title-color);
+}
+
+/* End Header Styling */
+/* ############################################################## */
+
+/* Start main section Styling */
+
+
+.main-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3em;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+.main-section .container h2{
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    
+
+}
+.main-section .container h3{
+    color: var(--text-darkcolor);
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.main-section .container p{
+    text-align: justify;
+    color: var(--section-p-color);
+}
+
+.main-section .main-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8em 2em;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.53em;
+    margin-top: 3em;
+    transition: 0.7s;
+}
+.main-section .main-btn:hover{
+    transform: scale(1.1);
+    color: var(--section-title-color);
+}
+.main-section .container-img .main-img{
+    width: 20em;
+    padding: 0;
+    padding-right: 1em;
+    justify-content: center;
+}
+
+
+/* End main section Styling */
+/* ############################################################## */
+
+/* Start meals section Styling */
+
+
+.meals-section .container .cards-container {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.meal-section-title{
+   display: flex;
+   justify-content: space-between;
+   justify-items: center;
+   padding: 1.5em 0;
+   margin-bottom: 1em;
+   color: var(--section-title-color);
+   align-items: center;
+}
+.meal-section-title p{
+    
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+
+.meal-section-title a{
+    margin-left: 1em;
+    font-size: 2em;
+    color:  var(--section-title-color);
+}
+
+.meal-section-title a:hover{
+    color: var(--main-color);
+}
+
+.meal-card{
+    background-color: var(--white-color);
+    width: 14em;
+    box-shadow: 0 5px 25px rgba( 1 1 1 / 15%);
+    border-radius: 0.66em;
+    padding: 1em;
+    margin: 0.2em;
+    transition: 0.7s ease;
+    text-align: center;
+}
+
+.meal-card:hover{
+    transform: scale(1.1);
+}
+.meal-card .meal-img{
+    width: 8.5em;
+    height: 8em;
+    margin-top: 1em;
+}
+.rating-stars{
+    color: var(--rating-stars-color);
+    margin-top: 1em;
+}
+
+.meal-card p{
+    color: var(--section-title-color);
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.meal-card .add-cart-btn{
+    display: inline-block;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 0.53em;
+    padding: 0.5em 0.5em;
+    /* margin: auto; */
+    background-color: var(--main-color);
+    color: var(--white-color);
+    margin-top: 1em;
+}
+.meal-card .add-cart-btn:hover{
+    color: var(--section-title-color);
+}
+
+.meal-card .add-cart-btn span{
+    font-size: 0.9;
+    margin-left: 0.5em;
+}
+
+/* End meals section Styling */
+/* ############################################################## */
+
+
+/* Start services section Styling */
+
+.section-title{
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--section-title-color);
+    text-align: center;
+    margin-bottom: 1.2em;
+    padding-bottom: 1em;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-section .service-card{
+    background-color: var(--white-color);
+    width: 14em;
+    box-shadow: 0 5px 25px rgba( 1 1 1 / 15%);
+    border-radius: 0.66em;
+    padding: 1em;
+    margin: 0.2em;
+    transition: 0.7s ease;
+    text-align: center;
+}
+
+.services-section .service-card:hover{
+    transform: scale(1.1);
+}
+
+.services-section .service-card .service-icon{
+    border: 1px solid var(--text-darkcolor);
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.services-section .service-card .service-icon i{
+    color: var(--main-color);
+    font-size: 4em;
+    font-weight: 600;
+    padding: 1em auto ;
+    margin-top: 0.5em;
+    margin-bottom: 0.6em;
+   
+}
+
+.service-card p{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--section-title-color);
+    padding: 1em;
+}
+
+/* End services section Styling */
+/* ############################################################## */
+
+
+
+/* Start reviews section Styling */
+.reviews-section-content{
+    /* background-color: var(--section-bg-color); */
+    padding-bottom: 10em;
+}
+
+.reviews-section .review-card{
+    display: flex;
+    background-color: var(--white-color);
+    width: 30em;
+    box-shadow: 0 5px 25px rgba( 1 1 1 / 15%);
+    border-radius: 0.66em;
+    padding: 1em;
+    margin: 0.2em;
+    transition: 0.7s ease;
+    text-align: justify;
+    justify-content: space-evenly;
+}
+
+.reviews-section .review-card:hover{
+    transform: scale(1.1);
+}
+.review-card .customer-img{
+    align-items: center;
+    border-radius: 50%;
+}
+.review-card img{
+    align-items: center;
+    border-radius: 50%;
+    width: 7em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.review-data .customer-name{
+    color: var(--section-title-color);
+    font-weight: 800;
+}
+
+.review-data .customer-review{
+    color: var(--section-p-color);
+    padding-top: 1em;
+    text-align: left;
+}
+/* End reviews section Styling */
+/* ############################################################## */
+
+
+footer{
+    
+    background-color: var(--main-color);
+    width: 100%;
+    bottom:0;
+    position: static ;
+}
+
+.footer-div{
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 1.5em 2em ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-div .footer-logo{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-div .footer-links a{
+    color: var(--white-color);
+    text-decoration: none;
+    margin-left: 1em ;
+    align-content: center;
+}
+.footer-div a:hover{
+    color: var(--section-title-color);
+}
+
+.footer-div .social-icons a{
+    padding: 0.5em;
+    color: var(--white-color);
+    align-items: center;
+    justify-content: center;
+}
+.footer-div .social-icons a:hover{
+    color: var(--section-title-color);
+}
+
+.footer-div p{
+    color: var(--white-color);
+}
